@@ -1,4 +1,5 @@
 import React from "react";
+import {Home,Info} from 'lucide-react'
 
 export const Navbar = () => {
   return (
@@ -8,9 +9,8 @@ export const Navbar = () => {
       </div>
 
         <ul className="flex space-x-6 text-white mr-4 cursor-pointer">
-          <li>Home</li>
-          <li>About</li>
-          <li>About</li>
+          <li><Home className="h-5 w-5 mr-2"/>Home</li>
+          <li><Info className="h-5 w-5"/>About</li>
         </ul>
     </div>
   );
