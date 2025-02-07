@@ -10,6 +10,7 @@ module.exports = {
         orbit5: { '0%': { transform: 'rotate(0deg) translateX(160px) rotate(0deg)' }, '100%': { transform: 'rotate(360deg) translateX(160px) rotate(-360deg)' } },
         orbit6: { '0%': { transform: 'rotate(0deg) translateX(180px) rotate(0deg)' }, '100%': { transform: 'rotate(360deg) translateX(180px) rotate(-360deg)' } },
         orbit7: { '0%': { transform: 'rotate(0deg) translateX(200px) rotate(0deg)' }, '100%': { transform: 'rotate(360deg) translateX(200px) rotate(-360deg)' } },
+        orbit8: { '0%': { transform: 'rotate(0deg) translateX(220px) rotate(0deg)' }, '100%': { transform: 'rotate(360deg) translateX(200px) rotate(-360deg)' } },
       },
       animation: {
         'orbit-1': 'orbit1 6s linear infinite',
@@ -19,6 +20,7 @@ module.exports = {
         'orbit-5': 'orbit4 14s linear infinite',
         'orbit-6': 'orbit4 16s linear infinite',
         'orbit-7': 'orbit4 18s linear infinite',
+        'orbit-8': 'orbit4 20s linear infinite',
       },
     },
   },
