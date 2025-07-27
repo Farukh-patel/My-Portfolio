@@ -1,11 +1,11 @@
-import React from "react";
-import { Home, Info, Sun, Moon } from "lucide-react";
+import { Home, Info, Sun, Moon, Bug } from "lucide-react";
 
 export const Navbar = (props) => {
   return (
     <div className={`${props.mode === "dark" ? "bg-indigo-950 text-white" : "bg-white text-black"} w-full h-14 fixed flex justify-between items-center`}>
       <div className="mx-4">
-        <img className="h-14 rounded-full" src="buglogo.png" alt="Logo" />
+        {/* <img className="h-14 rounded-full" src="buglogo.png" alt="Logo" /> */}
+        <Bug/>
       </div>
       <ul className="flex space-x-6 mr-4 cursor-pointer">
         <li className="flex items-center">
