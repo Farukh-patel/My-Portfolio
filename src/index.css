@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  background-color: #1d5bb3; /* This is bg-zinc-800 */
+}
 
 @keyframes fadeInScale {
     from {

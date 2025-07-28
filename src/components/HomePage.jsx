@@ -7,7 +7,7 @@ import {
   FaCss3Alt,
   FaJs,
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiMysql } from "react-icons/si";
+import { SiMongodb, SiExpress, SiMysql, SiTailwindcss } from "react-icons/si";
 
 export const HomePage = (props) => {
   const projects = [
@@ -56,12 +56,14 @@ export const HomePage = (props) => {
 
   return (
     <div
-      className={`min-h-screen transition-all duration-300 ${
-        props.mode === "dark"
-          ? "bg-indigo-950 text-white"
-          : "bg-white text-black"
-      }`}
+      className={`min-h-screen transition-colors duration-300 w-full ${props.mode === "dark"
+          ? "bg-zinc-900 text-white"
+          : "bg-gray-50 text-black"
+        }`}
     >
+
+
+
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center min-h-screen p-6">
         <div className="relative w-48 h-48 mb-6">
@@ -76,16 +78,16 @@ export const HomePage = (props) => {
             <FaNodeJs className="absolute text-green-500 text-3xl animate-orbit-3" />
             <SiExpress className="absolute text-white text-3xl animate-orbit-4" />
             <SiMongodb className="absolute text-green-500 text-3xl animate-orbit-5" />
-            <SiMysql className="absolute text-blue-500 text-3xl animate-orbit-6" />
+            <SiMysql className="absolute text-blue-900 text-4xl animate-orbit-6" />
             <FaPython className="absolute text-yellow-500 text-3xl animate-orbit-7" />
             <FaCss3Alt className="absolute text-blue-500 text-3xl animate-orbit-8" />
-            <FaReact className="absolute text-blue-400 text-3xl animate-orbit-9" />
+            <SiTailwindcss className="absolute text-blue-500 text-3xl animate-orbit-9" />
+            <FaReact className="absolute text-blue-400 text-3xl animate-orbit-10" />
           </div>
         </div>
         <div
-          className={`text-center p-4 rounded-xl shadow-md w-fit ${
-            props.mode === "dark" ? "bg-indigo-800" : "bg-gray-100"
-          }`}
+          className={`text-center p-4 rounded-xl shadow-lg w-fit ${props.mode === "dark" ? "bg-zinc-800" : "bg-white"
+            }`}
         >
           <p className="text-lg font-mono text-green-500">
             <span className="typing">
@@ -108,21 +110,20 @@ export const HomePage = (props) => {
           <FaHtml5 className="text-orange-500 text-3xl animate-bounce" />
           <FaCss3Alt className="text-blue-500 text-3xl animate-bounce" />
           <FaJs className="text-yellow-300 text-3xl animate-bounce" />
+          <SiTailwindcss className="text-blue-500 text-3xl animate-bounce" />
         </div>
       </section>
 
-      {/* Projects Section */}
       <section className="py-10 px-6">
-        <h2 className="text-center text-2xl font-semibold mb-6">Projects</h2>
+        <h2 className="text-2xl font-semibold mb-6 ">PROJECTS</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
               key={project.id}
-              className={`rounded-xl p-5 shadow-md transition transform hover:-translate-y-1 hover:shadow-lg ${
-                props.mode === "dark"
-                  ? "bg-purple-800 text-white"
-                  : "bg-gray-100 text-black"
-              }`}
+              className={`rounded-xl p-5 shadow-md transition transform hover:-translate-y-1 hover:shadow-lg ${props.mode === "dark"
+                ? "bg-zinc-800 text-white"
+                : "bg-white text-black"
+                }`}
             >
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p className="mb-4 text-sm opacity-90">{project.description}</p>
@@ -132,11 +133,10 @@ export const HomePage = (props) => {
                 rel="noopener noreferrer"
               >
                 <button
-                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
-                    props.mode === "dark"
-                      ? "bg-purple-500 hover:bg-purple-600"
-                      : "bg-white hover:bg-gray-200 text-black"
-                  } transition`}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${props.mode === "dark"
+                    ? "bg-zinc-800 hover:bg-zinc-700"
+                    : "bg-white hover:bg-gray-200 text-black"
+                    } transition`}
                 >
                   View Project
                 </button>
@@ -146,27 +146,22 @@ export const HomePage = (props) => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer>
         <div
-          className={`flex flex-col md:flex-row justify-between items-center px-6 py-4 mt-8 border-t ${
-            props.mode === "dark"
-              ? "bg-slate-800 text-white border-slate-700"
-              : "bg-white text-black border-gray-200"
-          }`}
+          className={`flex flex-col md:flex-row justify-between items-center px-6 py-4 mt-8 border-t ${props.mode === "dark"
+            ? "bg-zinc-900 text-white border-slate-700"
+            : "bg-white text-black border-gray-200"
+            }`}
         >
-          {/* < Bug /> Logo */}
           <div className="flex items-center space-x-1 text-xl font-mono mb-4 md:mb-0">
             <span>&lt;</span>
             <Bug
-              className={`w-5 h-5 ${
-                props.mode === "dark" ? "text-green-400" : "text-green-600"
-              }`}
+              className={`w-5 h-5 ${props.mode === "dark" ? "text-green-400" : "text-green-600"
+                }`}
             />
             <span>/&gt;</span>
           </div>
 
-          {/* Social Icons */}
           <div className="flex gap-6">
             <a
               href="https://github.com/Farukh-patel"
@@ -176,17 +171,17 @@ export const HomePage = (props) => {
             >
               <Github />
             </a>
+            <a href="https://www.linkedin.com/in/farukhpatel" className="hover:scale-110 transition-transform">
+              <Linkedin className="text-blue-600" />
+            </a>
+            <a href="mailto:farukhpatel364@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <Mail className="text-red-500" />
+            </a>
             <a href="#" className="hover:scale-110 transition-transform">
               <Facebook className="text-blue-600" />
             </a>
             <a href="#" className="hover:scale-110 transition-transform">
               <Instagram className="text-pink-500" />
-            </a>
-            <a href="#" className="hover:scale-110 transition-transform">
-              <Linkedin className="text-blue-600" />
-            </a>
-            <a href="#" className="hover:scale-110 transition-transform">
-              <Mail className="text-red-500" />
             </a>
           </div>
         </div>
