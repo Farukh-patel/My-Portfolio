@@ -1,4 +1,4 @@
-import { Facebook, Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Bug, Facebook, Github, Instagram, Linkedin, Mail } from "lucide-react";
 import {
   FaReact,
   FaNodeJs,
@@ -21,83 +21,84 @@ export const HomePage = (props) => {
       id: 2,
       title: "Note Taking App",
       description:
-        "A full stack Note taking app, user can read, create, update, and delete notes.",
+        "A full stack note-taking app where users can create, update, and delete notes.",
       link: "https://yourproject2.com",
     },
     {
       id: 3,
       title: "News App",
       description:
-        "A full stack news app useful to fetch the latest news across multiple categories.",
-      link: "https://yourproject2.com",
+        "A full stack news app to fetch the latest news across categories.",
+      link: "https://yourproject3.com",
     },
     {
       id: 4,
-      title: "Blogging App",
+      title: "Blogging Platform",
       description:
-        "A full stack blogging app where users can create, read, and add comments to blogs, all securely stored in a database.",
-      link: "https://yourproject2.com",
+        "A secure blogging app where users can create blogs and interact through comments.",
+      link: "https://yourproject4.com",
     },
     {
       id: 5,
-      title: "YouTube Focus Mode - Chrome Extension",
+      title: "YouTube Focus Extension",
       description:
-        "A Chrome extension that hides comments and recommendations on YouTube for a distraction-free experience.",
-      link: "https://yourproject2.com",
+        "A Chrome extension that removes distractions from YouTube for focus mode.",
+      link: "https://yourproject5.com",
     },
     {
       id: 6,
-      title: "Gemini-Clone",
+      title: "Gemini Clone",
       description:
-        "A Chrome extension that hides comments and recommendations on YouTube for a distraction-free experience.",
-      link: "https://yourproject2.com",
+        "A Gemini-style chatbot or assistant with clean UI and fast UX.",
+      link: "https://yourproject6.com",
     },
   ];
 
   return (
     <div
-      className={`${props.mode === "dark"
+      className={`min-h-screen transition-all duration-300 ${
+        props.mode === "dark"
           ? "bg-indigo-950 text-white"
           : "bg-white text-black"
-        } min-h-screen`}
+      }`}
     >
-      {/* Profile Section */}
-      <div className="flex items-center justify-center h-screen overflow-hidden">
-        <div className="relative w-48 h-48">
+      {/* Hero Section */}
+      <div className="flex flex-col items-center justify-center min-h-screen p-6">
+        <div className="relative w-48 h-48 mb-6">
           <img
             src="Me.png"
             alt="Profile"
-            className="w-24 rounded-full mx-auto border-4 border-white shadow-lg"
+            className="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-xl"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <FaHtml5 className="absolute text-orange-500 text-4xl animate-orbit-1" />
-            <FaJs className="absolute text-yellow-300 text-4xl animate-orbit-2" />
-            <FaNodeJs className="absolute text-green-500 text-4xl animate-orbit-3" />
-            <SiExpress className="absolute text-white text-4xl animate-orbit-4" />
-            <SiMongodb className="absolute text-green-500 text-4xl animate-orbit-5" />
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <FaHtml5 className="absolute text-orange-500 text-3xl animate-orbit-1" />
+            <FaJs className="absolute text-yellow-300 text-3xl animate-orbit-2" />
+            <FaNodeJs className="absolute text-green-500 text-3xl animate-orbit-3" />
+            <SiExpress className="absolute text-white text-3xl animate-orbit-4" />
+            <SiMongodb className="absolute text-green-500 text-3xl animate-orbit-5" />
             <SiMysql className="absolute text-blue-500 text-3xl animate-orbit-6" />
-
-            <FaPython className="absolute text-yellow-500 text-4xl animate-orbit-7" />
-            <FaCss3Alt className="absolute text-blue-500 text-4xl animate-orbit-8" />
-            <FaReact className="absolute text-blue-400  text-4xl animate-orbit-9" />
+            <FaPython className="absolute text-yellow-500 text-3xl animate-orbit-7" />
+            <FaCss3Alt className="absolute text-blue-500 text-3xl animate-orbit-8" />
+            <FaReact className="absolute text-blue-400 text-3xl animate-orbit-9" />
           </div>
         </div>
         <div
-          className={`flex flex-col justify-center items-center h-20 w-98 text-xm rounded-2xl p-4 ${props.mode === "dark" ? "bg-indigo-800" : "bg-gray-100"} shadow-lg relative`}
-          style={{ animation: "fadeInScale 1s ease-in-out" }}
+          className={`text-center p-4 rounded-xl shadow-md w-fit ${
+            props.mode === "dark" ? "bg-indigo-800" : "bg-gray-100"
+          }`}
         >
-          <p className="font-mono text-green-500 text-lg">
+          <p className="text-lg font-mono text-green-500">
             <span className="typing">
-              Hi!, I am FARUKH <br /> Trust me! I am a Software Developer
+              Hi! I am FARUKH <br /> Trust me, I’m a Software Developer 🚀
             </span>
           </p>
         </div>
       </div>
 
-      {/* Tech Stack Section */}
-      <div className="py-10">
+      {/* Tech Stack */}
+      <section className="py-10 px-6">
         <h2 className="text-center text-2xl font-semibold">Tech Stack</h2>
-        <div className="flex justify-center gap-6 mt-4">
+        <div className="flex flex-wrap justify-center gap-6 mt-6">
           <FaReact className="text-blue-400 text-3xl animate-bounce" />
           <FaNodeJs className="text-green-500 text-3xl animate-bounce" />
           <SiExpress className="text-gray-400 text-3xl animate-bounce" />
@@ -108,33 +109,34 @@ export const HomePage = (props) => {
           <FaCss3Alt className="text-blue-500 text-3xl animate-bounce" />
           <FaJs className="text-yellow-300 text-3xl animate-bounce" />
         </div>
-      </div>
+      </section>
 
       {/* Projects Section */}
-      <div className="py-10 px-10">
-        <h2 className="text-center text-2xl font-semibold">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-6 mt-4">
+      <section className="py-10 px-6">
+        <h2 className="text-center text-2xl font-semibold mb-6">Projects</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
               key={project.id}
-              className={`${props.mode === "dark"
+              className={`rounded-xl p-5 shadow-md transition transform hover:-translate-y-1 hover:shadow-lg ${
+                props.mode === "dark"
                   ? "bg-purple-800 text-white"
-                  : "bg-gray-200 text-black"
-                } p-5 rounded-lg shadow-md`}
+                  : "bg-gray-100 text-black"
+              }`}
             >
-              <h3 className="text-xl font-bold">{project.title}</h3>
-              <p
-                className={`${props.mode === "dark" ? "text-gray-300" : "text-black"
-                  }`}
+              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <p className="mb-4 text-sm opacity-90">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                {project.description}
-              </p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <button
-                  className={`${props.mode === "dark"
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
+                    props.mode === "dark"
                       ? "bg-purple-500 hover:bg-purple-600"
                       : "bg-white hover:bg-gray-200 text-black"
-                    } mt-2 px-4 py-2 rounded-lg transition`}
+                  } transition`}
                 >
                   View Project
                 </button>
@@ -142,31 +144,48 @@ export const HomePage = (props) => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Footer Section */}
+      {/* Footer */}
       <footer>
         <div
-          className={`${props.mode === "dark" ? "bg-slate-800" : "bg-gray-200"
-            } h-22 flex justify-between p-5`}
+          className={`flex flex-col md:flex-row justify-between items-center px-6 py-4 mt-8 border-t ${
+            props.mode === "dark"
+              ? "bg-slate-800 text-white border-slate-700"
+              : "bg-white text-black border-gray-200"
+          }`}
         >
-          <div>
-            <img className="h-12 rounded-full" src="buglogo.png" alt="Logo" />
+          {/* < Bug /> Logo */}
+          <div className="flex items-center space-x-1 text-xl font-mono mb-4 md:mb-0">
+            <span>&lt;</span>
+            <Bug
+              className={`w-5 h-5 ${
+                props.mode === "dark" ? "text-green-400" : "text-green-600"
+              }`}
+            />
+            <span>/&gt;</span>
           </div>
-          <div className="flex justify-center items-center gap-8">
-            <a href="https://github.com/Farukh-patel">
-              <Github className="text-gray-600" />
+
+          {/* Social Icons */}
+          <div className="flex gap-6">
+            <a
+              href="https://github.com/Farukh-patel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-110 transition-transform"
+            >
+              <Github />
             </a>
-            <a href="">
+            <a href="#" className="hover:scale-110 transition-transform">
               <Facebook className="text-blue-600" />
             </a>
-            <a href="">
+            <a href="#" className="hover:scale-110 transition-transform">
               <Instagram className="text-pink-500" />
             </a>
-            <a href="">
+            <a href="#" className="hover:scale-110 transition-transform">
               <Linkedin className="text-blue-600" />
             </a>
-            <a href="">
+            <a href="#" className="hover:scale-110 transition-transform">
               <Mail className="text-red-500" />
             </a>
           </div>
