@@ -1,4 +1,4 @@
-import { Home, Sun, Moon, Bug } from "lucide-react";
+import { Home, Sun, Moon, Bug, Download } from "lucide-react";
 
 export const Navbar = (props) => {
   return (
@@ -22,6 +22,14 @@ export const Navbar = (props) => {
           <Home className="h-5 w-5 mr-2" />
           Home
         </li>
+         <a
+          href="/FarukhPatelResume.pdf"
+          download
+          className="hover:border-blue-500 border-2 flex justify-center items-center gap-1  px-2 py-1 rounded-md transition duration-300"
+        >
+          <Download className="h-5"/>
+          Download Resume
+        </a>
 
         <li className="flex items-center" onClick={props.toggleDarkMode}>
           {props.mode === "dark" ? (

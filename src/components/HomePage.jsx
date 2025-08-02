@@ -68,7 +68,7 @@ export const HomePage = (props) => {
       <div className="flex flex-col items-center justify-center min-h-screen p-6">
         <div className="relative w-48 h-48 mb-6">
           <img
-            src="Me.png"
+            src="/Me.png"
             alt="Profile"
             className="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-xl"
           />
@@ -177,10 +177,7 @@ export const HomePage = (props) => {
             <a href="mailto:farukhpatel364@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
               <Mail className="text-red-500" />
             </a>
-            <a href="#" className="hover:scale-110 transition-transform">
-              <Facebook className="text-blue-600" />
-            </a>
-            <a href="#" className="hover:scale-110 transition-transform">
+            <a href="https://www.instagram.com/farukh.patel1" className="hover:scale-110 transition-transform">
               <Instagram className="text-pink-500" />
             </a>
           </div>
