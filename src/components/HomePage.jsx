@@ -47,10 +47,11 @@ export const HomePage = (props) => {
     },
     {
       id: 6,
+      isHosted:true,
       title: "Gemini Clone",
       description:
         "A Gemini-style chatbot or assistant with clean UI and fast UX.",
-      link: "https://yourproject6.com",
+      link: "https://man-seek.vercel.app",
     },
   ];
 
@@ -61,9 +62,6 @@ export const HomePage = (props) => {
           : "bg-gray-50 text-black"
         }`}
     >
-
-
-
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center min-h-screen p-6">
         <div className="relative w-48 h-48 mb-6">
@@ -140,6 +138,12 @@ export const HomePage = (props) => {
                 >
                   View Project
                 </button>
+                {project.isHosted ? <span
+                  className={`px-4 py-2 rounded-lg text-sm font-medium bg-blue-400
+                    } transition`}
+                >
+                  Hosted 🚀
+                </span>:""}
               </a>
             </div>
           ))}
